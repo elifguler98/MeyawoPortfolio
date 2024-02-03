@@ -1,0 +1,10 @@
+﻿@model List<MeyawoPortfolio.Models.TblCategory>
+
+
+@foreach(var x in Model)
+            {
+                <tr>
+                    <td>@x.CategoryID</td>
+                    <td>@x.CategoryName</td>
+                </tr>
+            }

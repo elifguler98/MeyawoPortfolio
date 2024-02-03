@@ -1,0 +1,31 @@
+﻿@model List<MeyawoPortfolio.Models.TblService>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Servis ID</th>
+        <th>Servis Adı</th>
+        <th>Description</th>
+        <th>Image Url</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+
+
+        <tr>
+            <td>@x.ServiceID</td>
+            <td>@x.Title</td>
+            <td>@x.Description</td>
+            <td>@x.ImgUrl</td>
+            <td><a href="/Service/DeleteService/@x.ServiceID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Service/GetService/@x.ServiceID" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Service/CreateService/" class="btn btn-outline-primary">Servis Ekle</a>
+

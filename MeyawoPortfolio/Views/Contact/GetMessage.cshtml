@@ -1,0 +1,32 @@
+﻿@model MeyawoPortfolio.Models.TblContact
+@{
+    ViewBag.Title = "GetMessage";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+
+<form class="form-group">
+    @Html.HiddenFor(x => x.ContactID)
+    @Html.LabelFor(x => x.NameSurname)
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "table table-bordered" })
+    <br />
+
+    @Html.LabelFor(x => x.Email)
+    @Html.TextBoxFor(x => x.Email, new { @class = "table table-bordered" })
+    <br />
+
+    @Html.LabelFor(x => x.Message)
+    @Html.TextAreaFor(x => x.Message, new { @class = "table table-bordered" })
+
+   
+
+    <br />
+   
+</form>
+
+
+<br />
+<a href="/Contact/Index/" class="btn btn-outline-primary">Mesajlar</a>
+
+
+

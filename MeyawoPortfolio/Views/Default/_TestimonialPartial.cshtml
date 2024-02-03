@@ -1,0 +1,28 @@
+﻿@model List<MeyawoPortfolio.Models.TblTestimonial>
+
+<section class="section" id="testmonial">
+    <div class="container text-center">
+        <p class="section-subtitle">Müşterilerim Benimle İlgili Ne Düşünüyor?</p>
+        <h6 class="section-title mb-6">Referanslarım</h6>
+
+        <!-- row -->
+        <div class="row">
+            @foreach (var x in Model)
+            {
+            <div class="col-md-6">
+                <div class="testimonial-card">
+                    <div class="testimonial-card-img-holder">
+                        <img src="@x.ImgUrl" class="testimonial-card-img">
+                    </div>
+                    <div class="testimonial-card-body">
+                        <p class="testimonial-card-subtitle">
+                            @x.Description
+                        </p>
+                        <h6 class="testimonial-card-title">@x.NameSurname</h6>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div> <!-- end of container -->
+</section>

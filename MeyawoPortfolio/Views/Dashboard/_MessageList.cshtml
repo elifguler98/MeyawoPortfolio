@@ -1,0 +1,10 @@
+﻿@model List<MeyawoPortfolio.Models.TblContact>
+
+@foreach(var x in Model)
+            {
+                <tr>
+                    <td>@x.ContactID</td>
+                    <td>@x.NameSurname</td>
+                    <td><a href="/Contact/GetMessage/@x.ContactID" class="btn btn-warning">Mesajı Aç</a></td>
+                </tr>
+            }

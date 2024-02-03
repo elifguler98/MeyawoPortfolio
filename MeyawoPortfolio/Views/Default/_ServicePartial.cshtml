@@ -1,0 +1,29 @@
+﻿@model List<MeyawoPortfolio.Models.TblService>
+
+<section class="section" id="service">
+    <div class="container text-center">
+        <p class="section-subtitle">What I Do ?</p>
+        <h6 class="section-title mb-6">Service</h6>
+        <!-- row -->
+        
+        <div class="row">
+            @foreach (var x in Model)
+            {
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="@x.ImgUrl"  class="icon">
+
+                            <h6 class="title">@x.Title</h6>
+                            <p class="subtitle">
+                                @x.Description
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+            </div><!-- end of row -->
+        
+    </div>
+       
+</section>

@@ -1,0 +1,23 @@
+﻿@model MeyawoPortfolio.Models.TblCategory
+@{
+    ViewBag.Title = "GetCategory";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+
+
+<br />
+<h2 style="text-align:center">Kategori Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
+{ 
+<form class="form-group" >
+    @Html.HiddenFor(x => x.CategoryID)
+    @Html.LabelFor(x => x.CategoryName)
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "table table-bordered" })
+  <button class="btn btn-outline-primary">Kaydet</button>
+</form>
+}
+<br />
+<br />
+<a href="/Category/Index/" class="btn btn-outline-primary">Kategoriler</a>

@@ -1,0 +1,35 @@
+﻿@model MeyawoPortfolio.Models.TblProject
+
+@{
+    ViewBag.Title = "CreateProject";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<br />
+<h2 style="text-align:center">Yeni Proje Ekleme Sayfası</h2>
+<br />
+
+<form class="form-group" method="post">
+
+    @Html.LabelFor(x => x.Title)
+    @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
+    <br />
+    @Html.LabelFor(x => x.Description)
+    @Html.TextBoxFor(x => x.Description, new { @class = "table table-bordered" })
+    <br />
+   
+    @Html.LabelFor(x => x.ProjectUrl)
+    @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "table table-bordered" })
+    <br />
+    @Html.LabelFor(x => x.ProjectCategory)
+    @Html.DropDownListFor(x=>x.ProjectCategory,(List<SelectListItem>) ViewBag.dgr1, new { @class = "table table-bordered" })
+
+   @* @Html.TextBoxFor(x => x.TblCategory, new { @class = "table table-bordered" })*@
+    <br />
+
+
+    <button class="btn btn-outline-primary">Kaydet</button>
+</form>
+<br />
+
+<a href="/Project/Index/" class="btn btn-outline-primary">Projeler</a>

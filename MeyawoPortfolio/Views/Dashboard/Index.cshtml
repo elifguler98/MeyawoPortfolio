@@ -1,0 +1,266 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+<head>
+    <title>Gradient Able bootstrap admin template by codedthemes </title>
+    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Gradient Able Bootstrap admin template made using Bootstrap 4. The starter version of Gradient Able is completely free for personal project." />
+    <meta name="keywords" content="free dashboard template, free admin, free bootstrap template, bootstrap admin template, admin theme, admin dashboard, dashboard template, admin template, responsive" />
+    <meta name="author" content="codedthemes">
+    <!-- Favicon icon -->
+    <link rel="icon" href="~/Templates/Dashboard/assets/images/favicon.ico" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="~/Templates/Dashboard/assets/css/bootstrap/css/bootstrap.min.css">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="~/Templates/Dashboard/assets/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="~/Templates/Dashboard/assets/icon/font-awesome/css/font-awesome.min.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="~/Templates/Dashboard/assets/icon/icofont/css/icofont.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="~/Templates/Dashboard/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/Templates/Dashboard/assets/css/jquery.mCustomScrollbar.css">
+</head>
+
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper">
+
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <div class="main-body">
+                    <div class="page-wrapper">
+
+                        <div class="page-body">
+                            <div class="row">
+
+                                <!-- order-card start -->
+                                <div class="col-md-6 col-xl-3">
+                                    <div class="card bg-c-blue order-card">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20">Projeler</h6>
+                                            <h2 class="text-right"><i class="ti-check-box f-left"></i><span>@ViewBag.pdeger</span></h2>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-3">
+                                    <div class="card bg-c-green order-card">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20">Kategori Sayısı</h6>
+                                            <h2 class="text-right"><i class="ti-menu-alt f-left"></i><span>@ViewBag.kdeger</span></h2>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-3">
+                                    <div class="card bg-c-yellow order-card">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20">Servis Sayısı</h6>
+                                            <h2 class="text-right"><i class="ti-receipt f-left"></i><span>@ViewBag.sdeger</span></h2>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-3">
+                                    <div class="card bg-c-pink order-card">
+                                        <div class="card-block">
+                                            <h6 class="m-b-20">Gelen Mesaj Sayısı</h6>
+                                            <h2 class="text-right"><i class="ti-email f-left"></i><span>@ViewBag.mdeger</span></h2>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- order-card end -->
+                                <!-- tabs card start -->
+                                <div class="col-sm-12">
+                                    <div class="card tabs-card">
+                                        <div class="card-block p-0">
+                                            <!-- Nav tabs -->
+                                            <ul class="nav nav-tabs md-tabs" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" data-toggle="tab" href="#home3" role="tab"><i class="fa fa-check-square-o"></i>Projeler</a>
+                                                    <div class="slide"></div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href="#profile3" role="tab"><i class="fa fa-navicon"></i>Kategoriler</a>
+                                                    <div class="slide"></div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href="#messages3" role="tab"><i class="fa fa-file-text-o"></i>Hizmetler</a>
+                                                    <div class="slide"></div>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-toggle="tab" href="#settings3" role="tab"><i class="fa fa-envelope-o"></i>Gelen Mesajlar</a>
+                                                    <div class="slide"></div>
+                                                </li>
+                                            </ul>
+                                            <!-- Tab panes -->
+                                            <div class="tab-content card-block">
+                                                <div class="tab-pane active" id="home3" role="tabpanel">
+
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <tr>
+                                                                <th>Proje ID</th>
+                                                                <th>Proje Başlığı</th>
+                                                                <th>Proje Kategorisi</th>
+                                                                
+                                                            </tr>
+                                                            @Html.Action("_ProjectList")
+                                                        </table>
+                                                    </div>
+                                                    <div class="text-center">
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="profile3" role="tabpanel">
+
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <tr>
+                                                                <th>Kategori ID</th>
+                                                                <th>Kategori Ad</th>
+                                                               
+                                                            </tr>
+                                                            @Html.Action("_CategoryList")
+                                                        </table>
+                                                    </div>
+                                                    <div class="text-center">
+                                                       
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="messages3" role="tabpanel">
+
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <tr>
+                                                                <th>Servis ID</th>
+                                                                <th>Servis Ad</th>
+                                                                <th>Açıklama</th>
+
+
+                                                            </tr>
+                                                            @Html.Action("_ServiceList")
+                                                        </table>
+                                                    </div>
+                                                    <div class="text-center">
+                         
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane" id="settings3" role="tabpanel">
+
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <tr>
+                                                                <th>Mesaj ID</th>
+                                                                <th>Gönderen</th>
+                                                                <th>Mesajı Aç</th>
+
+                                                            </tr>
+                                                            @Html.Action("_MessageList")
+                                                        </table>
+                                                    </div>
+                                                    <div class="text-center">
+                     
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- tabs card end -->
+                                <!-- statustic and process start -->
+
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Müşteri Memnuniyeti</h5>
+                                        </div>
+                                        <div class="card-block">
+                                            <span class="d-block text-c-blue f-24 f-w-600 text-center">54</span>
+                                            <canvas id="feedback-chart" height="100"></canvas>
+                                            <div class="row justify-content-center m-t-15">
+                                                <div class="col-auto b-r-default m-t-5 m-b-5">
+                                                    <h4>87%</h4>
+                                                    <p class="text-success m-b-0"><i class="ti-hand-point-up m-r-5"></i>Olumlu</p>
+                                                </div>
+                                                <div class="col-auto m-t-5 m-b-5">
+                                                    <h4>13%</h4>
+                                                    <p class="text-danger m-b-0"><i class="ti-hand-point-down m-r-5"></i>Olumsuz</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- statustic and process end -->
+                                <!-- social statustic start -->
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="card">
+                                        <div class="card-block text-center">
+                                            <i class="fa fa-check-square-o text-c-blue d-block f-40"></i>
+                                            <h4 class="m-t-20"><span class="text-c-blue">En Çok Tercih Edilen Proje  </span></h4>
+                                            <h5 class="m-b-20">Müşteri Yönetim Sistemi</h5>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="card">
+                                        <div class="card-block text-center">
+                                            <i class="fa fa-globe text-c-green d-block f-40"></i>
+                                            <h4 class="m-t-20"> Site Görüntülenmesi</h4>
+                                            <h5 class="m-b-20">13.432</h5>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- social statustic end -->
+
+
+                            </div>
+                        </div>
+
+                        <div id="styleSelector">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="~/Templates/Dashboard/assets/js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="~/Templates/Dashboard/assets/js/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="~/Templates/Dashboard/assets/js/popper.js/popper.min.js"></script>
+<script type="text/javascript" src="~/Templates/Dashboard/assets/js/bootstrap/js/bootstrap.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="~/Templates/Dashboard/assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+<!-- modernizr js -->
+<script type="text/javascript" src="~/Templates/Dashboard/assets/js/modernizr/modernizr.js"></script>
+<!-- am chart -->
+<script src="assets/pages/widget/amchart/amcharts.min.js"></script>
+<script src="assets/pages/widget/amchart/serial.min.js"></script>
+<!-- Chart js -->
+<script type="text/javascript" src="~/Templates/Dashboard/assets/js/chart.js/Chart.js"></script>
+<!-- Todo js -->
+<script type="text/javascript " src="~/Templates/Dashboard/assets/pages/todo/todo.js "></script>
+<!-- Custom js -->
+<script type="text/javascript" src="~/Templates/Dashboard/assets/pages/dashboard/custom-dashboard.min.js"></script>
+<script type="text/javascript" src="~/Templates/Dashboard/assets/js/script.js"></script>
+<script type="text/javascript " src="~/Templates/Dashboard/assets/js/SmoothScroll.js"></script>
+<script src="~/Templates/Dashboard/assets/js/pcoded.min.js"></script>
+<script src="~/Templates/Dashboard/assets/js/vartical-demo.js"></script>
+<script src="~/Templates/Dashboard/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>

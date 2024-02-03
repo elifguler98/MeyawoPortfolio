@@ -1,0 +1,36 @@
+﻿@model MeyawoPortfolio.Models.TblSocialMedia
+@{
+    ViewBag.Title = "GetSocialMedia";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<br />
+<h2 style="text-align:center">Servis Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("UpdateSocialMedia", "SocialMedia", FormMethod.Post))
+{
+    <form class="form-group">
+        @Html.HiddenFor(x=>x.SocialMediaID)
+        @Html.LabelFor(x => x.Title)
+        @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
+        <br />
+
+        @Html.LabelFor(x => x.SocialMediaUrl)
+        @Html.TextBoxFor(x => x.SocialMediaUrl, new { @class = "table table-bordered" })
+        <br />
+
+        @Html.LabelFor(x => x.Icon)
+        @Html.TextBoxFor(x => x.Icon, new { @class = "table table-bordered" })
+
+
+
+        <br />
+        <button class="btn btn-outline-primary">Kaydet</button>
+    </form>
+}
+<br />
+<br />
+<a href="/SocialMedia/Index/" class="btn btn-outline-primary">Sosyal Medyalar</a>
+
+
+

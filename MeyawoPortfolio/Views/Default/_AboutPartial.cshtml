@@ -1,0 +1,26 @@
+﻿@model List<MeyawoPortfolio.Models.TblAbout>
+
+@foreach(var item in Model)
+{
+<section class="section pt-0" id="about">
+    <!-- container -->
+    <div class="container text-center">
+        <!-- about wrapper -->
+        <div class="about">
+            <div class="about-img-holder">
+                <img src="@item.ImageUrl" class="about-img"
+                     alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+            </div>
+            <div class="about-caption">
+                <p class="section-subtitle">@item.Title</p>
+                <h2 class="section-title mb-3">@item.Header</h2>
+                <p>
+                    @item.Description
+                </p>
+                <a href="~/Templates/arveles.pdf" class="btn-rounded btn btn-outline-primary mt-4" download>CV'mi İndir</a>
+            </div>
+        </div>
+        <!-- end of about wrapper -->
+    </div><!-- end of container -->
+</section>
+}

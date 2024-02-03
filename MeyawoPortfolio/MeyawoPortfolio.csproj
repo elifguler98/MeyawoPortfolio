@@ -1,0 +1,917 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1F7A332-AAD0-4C64-BE78-081B0B67923F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MeyawoPortfolio</RootNamespace>
+    <AssemblyName>MeyawoPortfolio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44357</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\EducationController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\SocialMediaController.cs" />
+    <Compile Include="Controllers\StatisticController.cs" />
+    <Compile Include="Controllers\TestimonialController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblAbout.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblCategory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblContact.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblFeature.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblProject.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblService.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblSocialMedia.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblTestimonial.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Templates\Dashboard\assets\css\animate.css\css\animate.css" />
+    <Content Include="Templates\Dashboard\assets\css\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Templates\Dashboard\assets\css\chartist\chartist.css" />
+    <Content Include="Templates\Dashboard\assets\css\font-awesome.min.css" />
+    <Content Include="Templates\Dashboard\assets\css\ionicons.css" />
+    <Content Include="Templates\Dashboard\assets\css\jquery.mCustomScrollbar.css" />
+    <Content Include="Templates\Dashboard\assets\css\morris.js\css\morris.css" />
+    <Content Include="Templates\Dashboard\assets\css\partials\menu\pccoded-horizontal-menu.css" />
+    <Content Include="Templates\Dashboard\assets\css\pcoded-horizontal.min.css" />
+    <Content Include="Templates\Dashboard\assets\css\style.css" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\css\font-awesome.css" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\font-awesome.css" />
+    <Content Include="Templates\Dashboard\assets\icon\icofont\css\icofont.css" />
+    <Content Include="Templates\Dashboard\assets\icon\icofont\fonts\icofont.svg" />
+    <Content Include="Templates\Dashboard\assets\icon\SVG-animated\svg-weather.css" />
+    <Content Include="Templates\Dashboard\assets\icon\themify-icons\fonts\themify.svg" />
+    <Content Include="Templates\Dashboard\assets\icon\themify-icons\themify-icons.css" />
+    <Content Include="Templates\Dashboard\assets\images-old\auth\logo-dark.png" />
+    <Content Include="Templates\Dashboard\assets\images-old\auth\Logo-small-bottom.png" />
+    <Content Include="Templates\Dashboard\assets\images-old\auth\logo.png" />
+    <Content Include="Templates\Dashboard\assets\images-old\avatar-1.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\avatar-2.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\avatar-3.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\avatar-4.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\bg.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\favicon.ico" />
+    <Content Include="Templates\Dashboard\assets\images-old\flags\ENGLISH.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\flags\FRANCE.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\flags\PORTO.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\flags\SPAIN.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\logo.png" />
+    <Content Include="Templates\Dashboard\assets\images-old\mega-menu\01.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\mega-menu\02.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\mega-menu\03.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\mega-menu\04.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\mega-menu\05.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\mega-menu\06.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\pattern2.jpg" />
+    <Content Include="Templates\Dashboard\assets\images-old\user.png" />
+    <Content Include="Templates\Dashboard\assets\images\auth\logo-dark.png" />
+    <Content Include="Templates\Dashboard\assets\images\auth\Logo-small-bottom.png" />
+    <Content Include="Templates\Dashboard\assets\images\auth\logo.png" />
+    <Content Include="Templates\Dashboard\assets\images\avatar-1.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\avatar-2.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\avatar-3.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\avatar-4.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\bg.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\blog\blog-r-1.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\blog\blog-r-2.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\blog\blog-r-3.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\favicon.ico" />
+    <Content Include="Templates\Dashboard\assets\images\flags\ENGLISH.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\flags\FRANCE.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\flags\PORTO.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\flags\SPAIN.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\logo.png" />
+    <Content Include="Templates\Dashboard\assets\images\pattern1.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\pattern2.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\pattern3.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\pattern4.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\pattern5.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\pattern6.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\pattern7.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\pattern8.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\pattern9.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\product\prod1.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\product\prod2.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\product\prod3.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\product\prod4.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\select-arrow.png" />
+    <Content Include="Templates\Dashboard\assets\images\slider-full %282%29.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\slider-full %284%29.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\user.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\Group-user.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\widget\icon-1.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\icon-2.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\icon-3.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\icon-4.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\map-bg.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\mountain.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\prod.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\widget\prod1.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\widget\prod2.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\widget\prod3.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\widget\prod4.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\widget\profile-person1.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\widget\proticketbg.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\widget\seoimg1.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\widget\seoimg2.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\widget\seoimg3.jpg" />
+    <Content Include="Templates\Dashboard\assets\images\widget\sparcle-1.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\sparcle-2.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\user-1.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\user-2.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\user-3.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\user-4.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\user-blur-bg.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\user1.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\user2.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\user3.png" />
+    <Content Include="Templates\Dashboard\assets\images\widget\user4.png" />
+    <Content Include="Templates\Dashboard\assets\js\bootstrap-growl.min.js" />
+    <Content Include="Templates\Dashboard\assets\js\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Templates\Dashboard\assets\js\chart.js\Chart.js" />
+    <Content Include="Templates\Dashboard\assets\js\common-pages.js" />
+    <Content Include="Templates\Dashboard\assets\js\jquery-slimscroll\jquery.slimscroll.js" />
+    <Content Include="Templates\Dashboard\assets\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Templates\Dashboard\assets\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Templates\Dashboard\assets\js\jquery.mousewheel.min.js" />
+    <Content Include="Templates\Dashboard\assets\js\jquery\jquery.min.js" />
+    <Content Include="Templates\Dashboard\assets\js\modernizr\css-scrollbars.js" />
+    <Content Include="Templates\Dashboard\assets\js\modernizr\modernizr.js" />
+    <Content Include="Templates\Dashboard\assets\js\morris.js\morris.js" />
+    <Content Include="Templates\Dashboard\assets\js\pcoded.min.js" />
+    <Content Include="Templates\Dashboard\assets\js\popper.js\popper.min.js" />
+    <Content Include="Templates\Dashboard\assets\js\raphael\raphael.min.js" />
+    <Content Include="Templates\Dashboard\assets\js\script.js" />
+    <Content Include="Templates\Dashboard\assets\js\script.min.js" />
+    <Content Include="Templates\Dashboard\assets\js\SmoothScroll.js" />
+    <Content Include="Templates\Dashboard\assets\js\vartical-demo.js" />
+    <Content Include="Templates\Dashboard\assets\pages\accordion\accordion.js" />
+    <Content Include="Templates\Dashboard\assets\pages\accordion\accordion.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\c3\c3-custom-chart.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\chartjs\chartjs-custom.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\chartlist\chartlist-custom.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\chartlist\js\chartist-plugin-threshold.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\chartlist\js\chartist-plugin-tooltip.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\echarts\echart-custom.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\echarts\js\echarts-all.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\float\float-chart-custom.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\float\jquery.flot.categories.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\float\jquery.flot.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\float\jquery.flot.pie.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\google\js\custom-google-chart.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\knob\jquery.knob.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\knob\knob-custom-chart.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\morris\morris-custom-chart.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\nv-chart\js\stream_layers.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\nvd3\chart-nvd3.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\peity\peity-custom-chart.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\radial\css\radial.css" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\rickshow\d3.layout.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\rickshow\rickshow-custom-.js" />
+    <Content Include="Templates\Dashboard\assets\pages\chart\sparkline\chart-sparkline.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\amchart\css\amchart.css" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\amchart\css\export.css" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\amchart\js\amcharts.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\amchart\js\custom-amchart.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\amchart\js\export.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\amchart\js\images\dragIconRoundBig.svg" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\amchart\js\images\dragIconRoundBigH.svg" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\amchart\js\light.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\amchart\js\serial.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\analytic-dashboard.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\analytic-dashboard.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\crm-dashboard.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\custom-dashboard.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\custom-dashboard.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\custom-dashboard1.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\d3chart\js\bullet.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\d3chart\js\d3.v3.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\ecommerce-dashboard.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\high-chart\js\high-chart.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\horizontal-timeline\css\cd-arrow.svg" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\horizontal-timeline\css\reset.css" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\horizontal-timeline\css\style.css" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\horizontal-timeline\js\jquery.mobile.custom.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\horizontal-timeline\js\main.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\project-dashboard.js" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\project-dashboard.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\flag-icons.js" />
+    <Content Include="Templates\Dashboard\assets\pages\form-validation.js" />
+    <Content Include="Templates\Dashboard\assets\pages\google-maps\gmaps.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\google-maps\jquery.gmaps.js" />
+    <Content Include="Templates\Dashboard\assets\pages\icon-modal.js" />
+    <Content Include="Templates\Dashboard\assets\pages\notification\notification.css" />
+    <Content Include="Templates\Dashboard\assets\pages\notification\notification.js" />
+    <Content Include="Templates\Dashboard\assets\pages\range-slider.js" />
+    <Content Include="Templates\Dashboard\assets\pages\sortable-custom.js" />
+    <Content Include="Templates\Dashboard\assets\pages\todo\todo.js" />
+    <Content Include="Templates\Dashboard\assets\pages\user-profile.js" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\css\jquery-jvectormap-2.0.2.css" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\css\jquery-jvectormap.css" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\js\gdp-data.js" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\js\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\js\jquery-jvectormap-2.0.3.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\js\jquery-jvectormap-asia-mill.js" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\js\jquery-jvectormap-au-mill.js" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\js\jquery-jvectormap-ca-lcc.js" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\js\jquery-jvectormap-de-mill.js" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\js\jquery-jvectormap-in-mill.js" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\js\jquery-jvectormap-uk-mill-en.js" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\js\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\js\jquery-jvectormap-us-il-chicago-mill-en.js" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\js\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Templates\Dashboard\assets\pages\vector-maps\js\map-vector.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\amcharts.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\amcharts.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\ammap.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\ammap.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\continentsLow.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\continentsLow.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\gauge.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\gauge.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\light.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\light.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\pie.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\pie.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\serial.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\serial.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\worldLow.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\amchart\worldLow.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\calender\pignose.calendar.min.css" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\calender\pignose.calendar.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\custom-widget.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\custom-widget1.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\custom-widget1.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\custom-widget2.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\excanvas.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\flipclock\flipclock.css" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\flipclock\flipclock.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\gauge\gauge.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\jquery.sparkline.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\pretty-calender\calendar.css" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\pretty-calender\calendar.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\timer\jquery.countdown.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\timer\TimeCircles.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\timer\waypoints.min.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\waterball\createWaterBall-jquery.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\widget-advanced.js" />
+    <Content Include="Templates\Dashboard\assets\pages\widget\widget-advanced.min.js" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\menu\pccoded-horizontal-menu.css" />
+    <Content Include="Templates\Dashboard\index.html" />
+    <Content Include="Templates\index.html" />
+    <Content Include="Templates\meyawo-1.0.0\assets\css\meyawo.css" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\aebank.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\analytics.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\avatar2.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\avatar3.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\elif.png" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\folio-1.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\folio-2.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\folio-3.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\header.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\img-1.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\img-2.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\man.png" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\mobile.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\musteriyonetim.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\pencil-case.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\responsive.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\scooter.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\seodanismanlik.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\shipped.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\sqlicon.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\startup.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\todolist.jpg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\toolbox.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\imgs\web.svg" />
+    <Content Include="Templates\meyawo-1.0.0\assets\js\meyawo.js" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.affix.js" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.bundle.js" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.bundle.min.js" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.js" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.min.js" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\jquery\jquery-3.4.1.js" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\jquery\jquery-3.4.1.min.js" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\jquery\jquery-3.4.1.slim.js" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\jquery\jquery-3.4.1.slim.min.js" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\themify-icons\css\themify-icons.css" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\themify-icons\fonts\themify.svg" />
+    <Content Include="Templates\meyawo-1.0.0\components.html" />
+    <Content Include="Templates\meyawo-1.0.0\index.html" />
+    <Content Include="Templates\sidebar-09\css\bootstrap.min.css" />
+    <Content Include="Templates\sidebar-09\css\bootstrap\mixins\_border-radius.css" />
+    <Content Include="Templates\sidebar-09\css\bootstrap\mixins\_screen-reader.css" />
+    <Content Include="Templates\sidebar-09\css\bootstrap\mixins\_visibility.css" />
+    <Content Include="Templates\sidebar-09\css\bootstrap\utilities\_stretched-link.css" />
+    <Content Include="Templates\sidebar-09\css\bootstrap\_media.css" />
+    <Content Include="Templates\sidebar-09\css\style.css" />
+    <Content Include="Templates\sidebar-09\images\414660.jpg" />
+    <Content Include="Templates\sidebar-09\images\ayse1.jpg" />
+    <Content Include="Templates\sidebar-09\images\bg_1.jpg" />
+    <Content Include="Templates\sidebar-09\images\elif icon.jpg" />
+    <Content Include="Templates\sidebar-09\images\logo.jpg" />
+    <Content Include="Templates\sidebar-09\images\nature.jpg" />
+    <Content Include="Templates\sidebar-09\images\pembe.jpg" />
+    <Content Include="Templates\sidebar-09\index.html" />
+    <Content Include="Templates\sidebar-09\js\bootstrap.min.js" />
+    <Content Include="Templates\sidebar-09\js\jquery.min.js" />
+    <Content Include="Templates\sidebar-09\js\main.js" />
+    <Content Include="Templates\sidebar-09\js\popper.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Templates\sidebar-09\.DS_Store" />
+    <Content Include="Templates\sidebar-09\css\.DS_Store" />
+    <Content Include="Templates\sidebar-09\css\bootstrap\.DS_Store" />
+    <Content Include="Templates\sidebar-09\css\bootstrap\mixins\.DS_Store" />
+    <Content Include="Templates\sidebar-09\images\.DS_Store" />
+    <Content Include="Templates\sidebar-09\js\.DS_Store" />
+    <Content Include="Templates\sidebar-09\scss\.DS_Store" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\.DS_Store" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\bootstrap.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_badge.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_button-group.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_carousel.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_code.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_functions.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_input-group.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_media.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_navbar.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_popover.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_print.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_progress.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_reboot.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_toasts.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_utilities.scss" />
+    <Content Include="Templates\sidebar-09\scss\bootstrap\_variables.scss" />
+    <Content Include="Templates\sidebar-09\scss\style.scss" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Project\Index.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\abstracts\_mixins.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\abstracts\_variables.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\base\_base.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\base\_typography.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\components\_breadcrumb.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\components\_button.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\components\_card.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\components\_code.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\components\_dropdown.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\components\_hamburger.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\components\_navbar.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\components\_pagination.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\layout\_footer.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\layout\_header.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\layout\_sections.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\meyawo.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_alert.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_background-variant.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_badge.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_border-radius.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_box-shadow.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_breakpoints.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_buttons.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_caret.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_clearfix.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_deprecate.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_float.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_forms.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_gradients.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_grid-framework.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_grid.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_hover.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_image.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_list-group.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_lists.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_nav-divider.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_pagination.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_reset-text.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_resize.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_screen-reader.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_size.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_table-row.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_text-emphasis.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_text-hide.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_text-truncate.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_transition.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\mixins\_visibility.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_align.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_background.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_borders.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_clearfix.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_display.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_embed.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_flex.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_float.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_overflow.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_position.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_screenreaders.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_shadows.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_sizing.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_spacing.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_stretched-link.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_text.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\utilities\_visibility.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\vendor\_rfs.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_alert.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_badge.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_breadcrumb.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_button-group.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_buttons.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_card.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_carousel.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_close.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_code.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_custom-forms.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_dropdown.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_forms.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_functions.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_grid.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_images.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_input-group.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_jumbotron.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_list-group.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_media.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_mixins.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_modal.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_nav.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_navbar.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_pagination.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_popover.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_print.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_progress.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_reboot.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_root.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_spinners.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_tables.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_toasts.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_tooltip.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_transitions.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_type.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_utilities.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\scss\vendors\bootstrap-4.3.1\_variables.scss" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.bundle.js.map" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.bundle.min.js.map" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.js.map" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\bootstrap\bootstrap.min.js.map" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\jquery\jquery-3.4.1.min.map" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\jquery\jquery-3.4.1.slim.min.map" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\themify-icons\fonts\themify.eot" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\themify-icons\fonts\themify.ttf" />
+    <Content Include="Templates\meyawo-1.0.0\assets\vendors\themify-icons\fonts\themify.woff" />
+    <Content Include="Views\AdminLayout\_Layout.cshtml" />
+    <Content Include="Views\Project\CreateProject.cshtml" />
+    <Content Include="Views\AdminLayout\_HeaderPartial.cshtml" />
+    <Content Include="Views\AdminLayout\_SidebarPartial.cshtml" />
+    <Content Include="Views\AdminLayout\_ScriptPartial.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Service\Index.cshtml" />
+    <Content Include="Views\SocialMedia\Index.cshtml" />
+    <Content Include="Views\Testimonial\Index.cshtml" />
+    <Content Include="Templates\arveles.pdf" />
+    <Content Include="Templates\sidebar-09\images\nature.webp" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\_HeadPartial.cshtml" />
+    <Content Include="Views\Default\_NavbarPartial.cshtml" />
+    <Content Include="Views\Default\_FeaturePartial.cshtml" />
+    <Content Include="Views\Default\_AboutPartial.cshtml" />
+    <Content Include="Views\Default\_ServicePartial.cshtml" />
+    <Content Include="Views\Default\_ProjectPartial.cshtml" />
+    <Content Include="Views\Default\_JobPartial.cshtml" />
+    <Content Include="Views\Default\_TestimonialPartial.cshtml" />
+    <Content Include="Views\Default\_FooterPartial.cshtml" />
+    <Content Include="Views\Default\_ScriptPartial.cshtml" />
+    <Content Include="Views\Category\CreateCategory.cshtml" />
+    <Content Include="Views\Category\GetCategory.cshtml" />
+    <Content Include="Views\Project\GetProject.cshtml" />
+    <Content Include="Views\Service\CreateService.cshtml" />
+    <Content Include="Views\Service\GetService.cshtml" />
+    <Content Include="Views\SocialMedia\CreateSocialMedia.cshtml" />
+    <Content Include="Views\SocialMedia\GetSocialMedia.cshtml" />
+    <Content Include="Views\Testimonial\CreateTestimonial.cshtml" />
+    <Content Include="Views\Testimonial\GetTestimonial.cshtml" />
+    <Content Include="Templates\Dashboard\assets\css\partials\menu\pccoded-horizontal-menu.css.map" />
+    <Content Include="Templates\Dashboard\assets\css\partials\menu\pccoded-horizontal-menu.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\menu\_pcmenu.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_alert.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_authentication.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_breadcrumb.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_charts.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_chat.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_color.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_draggable.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_e-payment.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_editors.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_fb-wall.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_full-calender.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_job-find.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_mail-pages.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_maps.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_navbars.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_note.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_pre-loader.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_prism.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_progress-bar.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_range-slider.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\other\_rating.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\responsive\_responsive.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\tables\_tables.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\theme-elements\_box-shadow.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\theme-elements\_button.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\theme-elements\_form-elements.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\theme-elements\_icon-layout.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\theme-elements\_label-badges.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\theme-elements\_ready-to-use.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\todo\_todo.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\widget-dashboard\_dashboard.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\widget-dashboard\_widget.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\_dark.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\_general.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\_generic.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\_mixins.scss" />
+    <Content Include="Templates\Dashboard\assets\css\partials\_variables.scss" />
+    <Content Include="Templates\Dashboard\assets\css\pcoded-horizontal.min.css.map" />
+    <Content Include="Templates\Dashboard\assets\css\style.css.map" />
+    <Content Include="Templates\Dashboard\assets\css\style.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\animated.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\core.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\fixed-width.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\font-awesome.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\icons.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\larger.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\list.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\mixins.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\path.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\screen-reader.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\stacked.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\less\variables.less" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\font-awesome.css.map" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\_animated.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\_core.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\_icons.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\_larger.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\_list.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\_mixins.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\_path.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\_stacked.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\font-awesome\scss\_variables.scss" />
+    <Content Include="Templates\Dashboard\assets\icon\icofont\fonts\icofont.eot" />
+    <Content Include="Templates\Dashboard\assets\icon\icofont\fonts\icofont.ttf" />
+    <Content Include="Templates\Dashboard\assets\icon\icofont\fonts\icofont.woff" />
+    <Content Include="Templates\Dashboard\assets\icon\themify-icons\fonts\themify.eot" />
+    <Content Include="Templates\Dashboard\assets\icon\themify-icons\fonts\themify.ttf" />
+    <Content Include="Templates\Dashboard\assets\icon\themify-icons\fonts\themify.woff" />
+    <Content Include="Templates\Dashboard\assets\pages\dashboard\d3chart\js\bullets.json" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\menu\pccoded-horizontal-menu.css.map" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\menu\pccoded-horizontal-menu.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\menu\_pcmenu.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\other\_authentication.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\other\_breadcrumb.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\other\_charts.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\other\_color.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\other\_maps.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\other\_navbars.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\other\_progress-bar.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\responsive\_responsive.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\tables\_tables.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\theme-elements\_button.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\theme-elements\_form-elements.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\theme-elements\_icon-layout.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\theme-elements\_label-badges.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\todo\_todo.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\widget-dashboard\_widget.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\_dark.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\_general.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\_generic.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\_mixins.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\partials\_variables.scss" />
+    <Content Include="Templates\Dashboard\assets\scss\style.scss" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Dashboard\_ProjectList.cshtml" />
+    <Content Include="Views\Dashboard\_CategoryList.cshtml" />
+    <Content Include="Views\Dashboard\_ServiceList.cshtml" />
+    <Content Include="Views\Contact\GetMessage.cshtml" />
+    <Content Include="Views\Dashboard\_MessageList.cshtml" />
+    <Content Include="Views\Statistic\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Education\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62933</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44357/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

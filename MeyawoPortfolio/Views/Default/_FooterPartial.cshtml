@@ -1,0 +1,14 @@
+﻿@model List<MeyawoPortfolio.Models.TblSocialMedia>
+<div class="container">
+    <footer class="footer">
+        <p class="mb-0">
+            Tüm Hakları Saklıdır / 2024
+        </p>
+        <div class="social-links text-right m-auto ml-sm-auto">
+            @foreach (var x in Model)
+            {
+            <a href="@x.SocialMediaUrl" class="link"><i class="@x.Icon"></i></a>
+            }
+        </div>
+    </footer>
+</div>
